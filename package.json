@@ -1,6 +1,6 @@
 {
   "name": "sum-comp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "vue": ">=2.6.0",
     "ant-design-vue": ">=1.6.5",
     "vxe-table": ">=3.0.0",
-    "xe-utils": "3.x"
+    "xe-utils": ">=3.0.0"
   },
   "repository": {
     "type": "git",
