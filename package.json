@@ -1,15 +1,22 @@
 {
-  "name": "common",
+  "name": "sum-comp",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "ant-design-vue": "^1.7.4",
+    "core-js": "^3.10.0",
+    "moment": "^2.29.1",
+    "vue": "^2.6.11",
+    "vue-draggable-resizable": "2.1.0",
+    "vue-router": "^3.5.1",
+    "vxe-table": "^3.2.9",
+    "xe-utils": "^3.1.13"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -20,7 +27,24 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "mockjs": "^1.1.0",
+    "node-sass": "^4.14.1",
     "prettier": "^2.2.1",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": ">=2.6.0",
+    "ant-design-vue": ">=1.6.5",
+    "vxe-table": ">=3.0.0",
+    "xe-utils": "3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HKChkc/sum-comp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HKChkc/sum-comp/issues",
+    "email": "2460102575@qq.com"
   }
 }

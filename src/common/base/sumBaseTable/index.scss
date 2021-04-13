@@ -1,0 +1,205 @@
+@import '../../style/common.scss';
+.center {
+  display: flex;
+  align-items: center;
+}
+.sum-base-table {
+  height: 100%;
+  position: relative;
+  user-select: none;
+  &:focus {
+    outline: none;
+    div {
+      outline: none;
+    }
+  }
+  .vxe-table {
+    &:focus {
+      outline: none;
+    }
+    .vxe-table--render-wrapper,
+    .vxe-table--main-wrapper {
+      outline: none;
+    }
+    .vxe-table--header-wrapper {
+      background: $table-row-light;
+      .vxe-table--header {
+        .vxe-header--row {
+          th.vxe-header--column {
+            height: $table-header-height-v4;
+            padding: 0;
+            color: $font-color-label;
+            font-size: $min-font-size;
+            font-weight: normal;
+            .vxe-cell {
+              height: $table-header-height-v4;
+              @extend .center;
+              height: 24px;
+              &:hover {
+                background: #ddfffa;
+                color: $SELF-bgcolor;
+                .icon-arrow-up,
+                .icon-arrow-down {
+                  visibility: visible;
+                }
+              }
+              .icon-arrow-up,
+              .icon-arrow-down {
+                visibility: hidden;
+                color: $border-color;
+                font-size: 12px;
+              }
+              .create-time {
+                .sumscope-icon {
+                  visibility: visible;
+                }
+              }
+              .vxe-cell--title {
+                @extend .center;
+                .sorting-field {
+                  color: $SELF-bgcolor;
+                  .sumscope-icon,
+                  .icon-arrow-up,
+                  .icon-arrow-down {
+                    color: #039e86 !important;
+                    visibility: visible !important;
+                  }
+                }
+              }
+            }
+            .vxe-resizable {
+              width: 8px;
+              height: 8px;
+              border-right: 1px solid #969696;
+              top: 50%;
+              transform: translateY(-3px);
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    .vxe-table--body-wrapper {
+      overflow-x: hidden;
+      &:focus {
+        outline: none;
+      }
+      .vxe-table--body {
+        tbody {
+          & > tr:nth-child(odd) {
+            background-color: $table-row-dark;
+          }
+          & > tr:nth-child(even) {
+            background-color: $table-row-light;
+          }
+        }
+        .vxe-body--row {
+          &:hover {
+            background: $row-selected-color;
+          }
+          .vxe-body--column {
+            height: $table-row-height-v4;
+          }
+          td {
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+          }
+        }
+        // 选中行样式
+        .row--checked {
+          background: $row-selected-color !important;
+        }
+        .row--checked,
+        .row--checked + :not(.row--checked) {
+          td {
+            border-top: 1px solid $SELF-bgcolor;
+          }
+        }
+        .row--checked + .row--checked {
+          td {
+            border-top: 1px solid $row-selected-color;
+          }
+        }
+        .row--checked:last-of-type {
+          td {
+            border-bottom: 1px solid $SELF-bgcolor;
+          }
+        }
+      }
+
+      .vxe-table--empty-block {
+        visibility: visible;
+        .vxe-table--empty-content {
+          display: inline-block;
+        }
+      }
+    }
+    // 多选框样式
+    .vxe-cell--checkbox {
+      width: 12px;
+      height: 12px;
+      font-size: 12px;
+      .vxe-checkbox--icon {
+        font-size: 12px;
+        &:before {
+          width: 12px;
+          height: 12px;
+          border-color: $SELF-bgcolor;
+          border-radius: 2px;
+        }
+      }
+      &:hover {
+        .vxe-checkbox--icon:before {
+          border-color: $SELF-bgcolor;
+        }
+      }
+    }
+    .is--checked.vxe-cell--checkbox {
+      .vxe-checkbox--icon {
+        &:before {
+          background-color: $SELF-bgcolor;
+        }
+      }
+    }
+    .is--indeterminate.vxe-cell--checkbox {
+      .vxe-checkbox--indeterminate-icon {
+        &:before {
+          background-color: #fff;
+        }
+        &:after {
+          width: 4px;
+          height: 4px;
+          border: 2px solid $SELF-bgcolor;
+        }
+      }
+    }
+
+    .vxe-cell {
+      padding: 0;
+      @extend .center;
+    }
+    .col--checkbox {
+      .vxe-cell {
+        @extend .center;
+        justify-content: center;
+        .vxe-cell--checkbox {
+          .vxe-checkbox--icon {
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .vxe-table--empty-content {
+      display: none;
+    }
+  }
+
+  .selected-range-area {
+    display: none;
+    position: absolute;
+    border: 1px solid #3592cf;
+    background: rgba($color: #5ab1bd, $alpha: 0.4);
+    z-index: 10;
+  }
+}
