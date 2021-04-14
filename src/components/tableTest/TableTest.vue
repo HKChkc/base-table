@@ -44,13 +44,16 @@
 // import SumResizeableTitle from '../../common/base/sumResizeableTitle';
 import { TABLE_DATA } from '../../../mock/tableData';
 import { COLUMNS, COLUMNS_MAP } from './const';
-import { SumBaseTable, SumResizeableTitle } from '../../../dist/sum-comp';
+// import { SumResizeableTitle } from '../../../dist/sum-comp';
+// import { SumBaseTable, SumResizeableTitle } from '../../../lib/sum-comp.umd.min';
+// console.log(`d`, d);
+// const { SumBaseTable, SumResizeableTitle } = d;
 export default {
   name: 'table-test',
 
   components: {
-    'sum-base-table': SumBaseTable,
-    'sum-resizeable-title': SumResizeableTitle,
+    // 'sum-base-table': SumBaseTable,
+    // 'sum-resizeable-title': SumResizeableTitle,
   },
 
   data() {

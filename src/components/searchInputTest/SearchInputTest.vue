@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import SumSearchInput from '../../common/base/sumSearchInput';
+// import SumSearchInput from '../../common/base/sumSearchInput';
 export default {
   name: 'search-input-test',
 
   components: {
-    'sum-search-input': SumSearchInput,
+    // 'sum-search-input': SumSearchInput,
   },
 
   methods: {

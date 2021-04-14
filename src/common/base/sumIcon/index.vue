@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 's-icon',
+  name: 'sum-icon',
   props: {
     type: { type: String, default: '' },
     disabled: { type: Boolean, default: false },

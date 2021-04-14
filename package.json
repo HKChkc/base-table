@@ -1,12 +1,13 @@
 {
   "name": "sum-comp",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "private": false,
-  "main": "dist/sum-comp.js",
+  "main": "lib/sum-comp.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name sum-comp --dest lib index.js"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.4",
@@ -48,9 +49,6 @@
     "email": "2460102575@qq.com"
   },
   "files": [
-    "src",
-    "dist/css",
-    "dist/js/*.js",
-    "dist/*.js"
+    "lib"
   ]
 }
