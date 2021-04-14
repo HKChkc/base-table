@@ -1,8 +1,8 @@
 {
   "name": "sum-comp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
-  "main": "index.js",
+  "main": "dist/sum-comp.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -46,5 +46,11 @@
   "bugs": {
     "url": "https://github.com/HKChkc/sum-comp/issues",
     "email": "2460102575@qq.com"
-  }
+  },
+  "files": [
+    "src",
+    "dist/css",
+    "dist/js/*.js",
+    "dist/*.js"
+  ]
 }
