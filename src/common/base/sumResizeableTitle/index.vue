@@ -76,7 +76,7 @@ export default {
       this.timer = setTimeout(() => {
         this.prevTime = null;
         this.timer = null;
-      });
+      }, 500);
     },
 
     onDbClick() {

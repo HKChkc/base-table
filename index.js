@@ -5,7 +5,7 @@ import SumResizeDetecter from './src/common/base/sumResizeDetecter/index.vue';
 import SumResizeableTitle from './src/common/base/sumResizeableTitle/index.vue';
 import SumSearchInput from './src/common/base/sumSearchInput/index.vue';
 import SumSelect from './src/common/base/sumSelect/index.vue';
-import SumTextToolTip from './src/common/base/sumSelect/index.vue';
+import SumTextToolTip from './src/common/base/sumTextTooltip/index.vue';
 
 const comps = [
   SumBaseTable,
