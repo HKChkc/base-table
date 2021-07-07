@@ -1,7 +1,7 @@
 <template>
   <div class="icon-test">
     icon-test
-    <sum-icon type="download" :disabled="false" @on-click="handleClick"></sum-icon>
+    <sum-icon type="copy" :disabled="false" @on-click="handleClick"></sum-icon>
   </div>
 </template>
 

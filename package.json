@@ -1,6 +1,6 @@
 {
   "name": "sum-comp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "main": "lib/sum-comp.umd.min.js",
   "scripts": {
