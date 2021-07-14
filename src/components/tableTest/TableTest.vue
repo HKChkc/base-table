@@ -40,8 +40,8 @@
 </template>
 
 <script>
-// import SumBaseTable from '../../common/base/sumBaseTable/SumBaseTable';
-// import SumResizeableTitle from '../../common/base/sumResizeableTitle';
+import SumBaseTable from '../../common/base/sumBaseTable/SumBaseTable';
+import SumResizeableTitle from '../../common/base/sumResizeableTitle';
 import { TABLE_DATA } from '../../../mock/tableData';
 import { COLUMNS, COLUMNS_MAP } from './const';
 // import { SumResizeableTitle } from '../../../dist/sum-comp';
@@ -52,8 +52,8 @@ export default {
   name: 'table-test',
 
   components: {
-    // 'sum-base-table': SumBaseTable,
-    // 'sum-resizeable-title': SumResizeableTitle,
+    'sum-base-table': SumBaseTable,
+    'sum-resizeable-title': SumResizeableTitle,
   },
 
   data() {

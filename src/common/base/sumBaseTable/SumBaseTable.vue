@@ -172,6 +172,19 @@ export default {
       },
       immediate: true,
     },
+    isDragging: {
+      handler(val) {
+        if (val) {
+          const areaEle = this.$refs.selectedArea;
+          this.firstPoint = [];
+          this.secondPoint = [];
+          if (areaEle) {
+            areaEle.style.display = 'none';
+          }
+        }
+      },
+      immediate: true,
+    },
   },
 
   mounted() {
@@ -413,8 +426,9 @@ export default {
       }
       const { clientX, clientY } = this.recalculateClient(e);
       this.isRangeSelectedStart = true;
-      // this.firstPoint = [e.clientX, e.clientY];
-      this.firstPoint = [clientX, clientY];
+      if (!this.isDragging) {
+        this.firstPoint = [clientX, clientY];
+      }
     },
 
     handleBaseTableMouseMove(e) {
@@ -519,6 +533,7 @@ export default {
     },
 
     drawSelectArea() {
+      if (this.firstPoint && !this.firstPoint.length) return;
       const areaEle = this.$refs.selectedArea;
       const tableEle = this.$refs.tableWrapper;
       const { top, left } = tableEle.getBoundingClientRect();
